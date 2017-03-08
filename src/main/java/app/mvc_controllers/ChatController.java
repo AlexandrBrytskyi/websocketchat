@@ -41,7 +41,8 @@ public class ChatController {
         try {
             User registered = userService.register(userName, pass);
             redirectAttributes.addFlashAttribute("user", registered);
-            return "redirect:chat";
+            redirectAttributes.addAttribute("error", "Ok," + registered.getName()+", now login :)");
+            return "redirect:login";
         } catch (UserAlreadyExistsException e) {
             e.printStackTrace();
             model.addAttribute("error", e.getMessage());
@@ -50,7 +51,7 @@ public class ChatController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String login(@RequestParam(name = "err", required = false) String errorMessage, Model model) {
+    public String login(@ModelAttribute(name = "error") String errorMessage, Model model) {
         model.addAttribute("error", errorMessage);
         return "login";
     }
