@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.service.UserServiceTest" time="10.474" tests="4" errors="0" skipped="0" failures="0">
+<testsuite name="app.service.UserServiceTest" time="19.854" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2016.3.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -12,7 +12,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7538"/>
+    <property name="idea.launcher.port" value="7533"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -62,8 +62,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="_001registerTest" classname="app.service.UserServiceTest" time="1.345"/>
-  <testcase name="_002loginTest" classname="app.service.UserServiceTest" time="1.013"/>
-  <testcase name="_003goInRoomTest" classname="app.service.UserServiceTest" time="1.589"/>
-  <testcase name="_004_2usersloginGoInRoomWriteMessagesGetMessagesTest" classname="app.service.UserServiceTest" time="6.527"/>
+  <testcase name="_001registerTest" classname="app.service.UserServiceTest" time="2.539"/>
+  <testcase name="_002loginTest" classname="app.service.UserServiceTest" time="1.711"/>
+  <testcase name="_003goInRoomTest" classname="app.service.UserServiceTest" time="3.168"/>
+  <testcase name="_004_2usersloginGoInRoomWriteMessagesGetMessagesTest" classname="app.service.UserServiceTest" time="12.436"/>
 </testsuite>
