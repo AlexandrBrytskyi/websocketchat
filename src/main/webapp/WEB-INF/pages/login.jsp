@@ -50,6 +50,18 @@
 
 <body>
 
+<c:set var="error" value="${error}"/>
+<c:if test="${not empty error or not empty param.containsKey('error')}">
+    <div class="alert alert-danger alert-dismissable fade in" id="error_alert">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>${error}!</strong> Change input and try again.
+    </div>
+    <script>
+        setTimeout(function () {
+            $(".alert").alert('close');
+        }, 2000);
+    </script>
+</c:if>
 
 <!-- Top content -->
 <div class="top-content">
@@ -176,23 +188,6 @@
 
 </div>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <c:set var="error" value="${error}"/>
-        <c:if test="${not empty error or not empty param.containsKey('error')}">
-            <div class="alert alert-danger alert-dismissable fade in" id="error_alert">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>${error}!</strong> Change input and try again.
-            </div>
-            <script>
-                setTimeout(function () {
-                    $(".alert").alert('close');
-                }, 2000);
-            </script>
-        </c:if>
-    </div>
-</footer>
 
 
 </body>

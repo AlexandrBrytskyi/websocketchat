@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.csrf().disable()
+        http.csrf().disable().sessionManagement().sessionFixation().migrateSession().and()
                 .authorizeRequests()
                 .antMatchers("/chat/chat").access("hasRole('USER')")
                 .anyRequest()
@@ -57,6 +57,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/chat/login")
+                .failureForwardUrl("/chat/login?credentials=false")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .successForwardUrl("/chat/logined")
